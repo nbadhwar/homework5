@@ -55,20 +55,20 @@ footer{
 
 @-webkit-keyframes logo_wiggle{
   /*Your code here.*/
+  from {width: 25px;}
+  to {width: 420px;}
 }
 
 @keyframes logo_wiggle{
   /*Your code here.*/
   from {width: 25px;}
   to {width: 420px;}
-
 } 
 
 #logo{
   /*Your code here.*/
   animation: logo_wiggle 15s none;
-
- 
+  -webkit-animation: logo_wiggle 15s none;
 }
 
 /* Cards! */
@@ -164,7 +164,7 @@ header{
   /*Your code here again.*/
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
 }
 
 .nav_item a{
@@ -195,17 +195,13 @@ header{
   /* Navbar */
   header{
     /*Your code here again.*/
-    display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   .nav_links{
     /*Your code here again.*/  
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: right;
-    align-items: flex-end;
   }
 
   .nav_item a{
@@ -219,7 +215,31 @@ header{
   }
   /*Your code here again.*/
   /*You will want four selectors*/  
+  body {
+    background-image: none;
+  }
+  
+  header{
+    
+  }
+
+  .pricing{
+    align-items: flex-start;
+  }
+
+  #gallery, .gallery{
+    display: none;
+  }
+
 }
 
+@media screen and (prefers-reduced-motion){
+  #logo{
+    /*Your code here.*/
+    animation: none;
+
+  }
+
+}
 /*Your code here again.*/ 
 /*Add media query to handle reduced-motion*/
